@@ -1,38 +1,213 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: none;
+    border-radius: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-main-content {
+    /* Ajustado el padding-top para compensar el header fijo */
+    padding: 90px 5% 25px 5%;
+    flex-grow: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.section-block {
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: #fdfdfd;
+    border-left: 6px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-block h2 {
+    color: #34495e;
+    font-size: 2em;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.team-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-list li {
+    margin: 15px;
+    text-align: center;
+    flex-basis: calc(33.33% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.4;
+}
+
+.team-list li strong {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.15em;
+}
+
+.team-member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+}
+
+.er-diagram,
+.crud-screenshot {
+    max-width: 90%; /* Ajustado para más ancho */
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+    margin: 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 0.95em;
+    color: #666;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.crud-operations h3 {
+    color: #2980b9;
+    font-size: 1.6em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px dashed #cfe2f3;
+    padding-bottom: 5px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .app-main-content {
+        padding: 90px 4% 20px 4%; /* Ajustado padding-top y laterales para móviles */
+    }
+    .section-block {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+    .section-block h2 {
+        font-size: 1.7em;
+        margin-bottom: 15px;
+    }
+    .team-list li {
+        flex-basis: calc(50% - 30px);
+        margin: 10px;
+    }
+    .team-member-photo {
+        width: 100px;
+        height: 100px;
+    }
+    .er-diagram,
+    .crud-screenshot {
+        margin: 20px auto;
+        max-height: 400px;
+    }
+    .crud-operations h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-main-content {
+        padding: 90px 3% 15px 3%; /* Ajustado padding-top y laterales para pantallas muy pequeñas */
+    }
+    .section-block {
+        padding: 15px;
+        margin-bottom: 20px;
+        border-left-width: 4px;
+    }
+    .section-block h2 {
+        font-size: 1.5em;
+        padding-bottom: 8px;
+        margin-bottom: 12px;
+    }
+    .team-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .team-list li {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        font-size: 1em;
+    }
+    .team-member-photo {
+        width: 80px;
+        height: 80px;
+    }
+    .er-diagram,
+    .crud-screenshot {
+        margin: 15px auto;
+        border-radius: 5px;
+        max-height: 300px;
+    }
+    .image-caption {
+        font-size: 0.85em;
+        margin-top: -8px;
+        margin-bottom: 15px;
+    }
+    .crud-operations h3 {
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
 }

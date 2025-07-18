@@ -1,0 +1,108 @@
+/* src/Componentes/Header.css */
+
+.app-header {
+    background: linear-gradient(90deg, #174372, #00b8d9, #174372);
+    color: white;
+    padding: 10px 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-bottom: 4px solid #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.header-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    max-width: 70%;
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.app-header .project-tagline {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    opacity: 0.9;
+    flex-grow: 0;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.btn-mision1-render {
+    display: inline-block;
+    background-color: #12b7f3;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    flex-shrink: 0;
+}
+
+.btn-mision1-render:hover {
+    background-color: #2dd3f475;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+    .app-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 20px;
+        gap: 8px;
+        justify-content: center;
+    }
+    .header-text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+    .app-header h1 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+    .app-header .project-tagline {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+    .btn-mision1-render {
+        padding: 7px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header {
+        padding: 8px 15px;
+    }
+    .app-header h1 {
+        font-size: 20px;
+    }
+    .app-header .project-tagline {
+        font-size: 12px;
+    }
+    .btn-mision1-render {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+}
