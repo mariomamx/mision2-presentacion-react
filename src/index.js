@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css'; 
 import App from './App'; 
+import { BrowserRouter } from 'react-router-dom';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -10,8 +11,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // Renderiza el componente principal <App /> dentro del modo estricto de React
 root.render(
+
   <React.StrictMode>
+    <BrowserRouter>
     <App />
+  </BrowserRouter>
+    
   </React.StrictMode>
 );
 
