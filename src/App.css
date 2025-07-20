@@ -11,30 +11,27 @@ html, body {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f0f2f5;
+    background-color:  #E6F0F8; 
     color: #333;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 .app-container {
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     background: #fff;
-    box-shadow: none;
-    border-radius: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
 }
 
 .app-main-content {
-    /* Ajustado el padding-top para compensar el header fijo */
-    padding: 90px 5% 25px 5%;
+    padding: 60px 5% 25px 5%;
     flex-grow: 1;
 }
 
@@ -98,7 +95,7 @@ body {
 
 .er-diagram,
 .crud-screenshot {
-    max-width: 90%; /* Ajustado para más ancho */
+    max-width: 90%;
     height: auto;
     max-height: 500px;
     object-fit: contain;
@@ -123,7 +120,7 @@ body {
     font-size: 1.6em;
     margin-top: 30px;
     margin-bottom: 15px;
-    border-bottom: 1px dashed #cfe2f3;
+    border-bottom: 1px dashed #cfe2f1;
     padding-bottom: 5px;
 }
 
@@ -140,7 +137,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .app-main-content {
-        padding: 90px 4% 20px 4%; /* Ajustado padding-top y laterales para móviles */
+        padding: 90px 4% 20px 4%;
     }
     .section-block {
         padding: 20px;
@@ -170,7 +167,7 @@ a:hover {
 
 @media (max-width: 480px) {
     .app-main-content {
-        padding: 90px 3% 15px 3%; /* Ajustado padding-top y laterales para pantallas muy pequeñas */
+        padding: 90px 3% 15px 3%;
     }
     .section-block {
         padding: 15px;

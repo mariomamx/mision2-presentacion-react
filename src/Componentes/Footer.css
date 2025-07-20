@@ -1,3 +1,5 @@
+/* src/Componentes/Footer.css */
+
 .app-footer {
     background-color: #174372;
     color: #f1f5f9;
@@ -5,21 +7,23 @@
     text-align: center;
     font-size: 14px;
 
-    position: sticky;
-    bottom: 0;
+    position: sticky; /* <-- Esto es lo que "pega" el footer */
+    bottom: 0; /* Lo pega al final del contenedor con scroll, si hay scroll */
     width: 100%;
     left: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 1000; /* Asegura que el footer esté por encima de la mayoría de los elementos */
 
     border-top: 4px solid #334155;
     box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+    /* margin-top: auto; si el sticky no funciona, esto lo empuja al final */
 }
 
 .app-footer p {
-    margin: 0;
+    margin: 0; /* Elimina el margen por defecto de los párrafos */
 }
 
+/* --- Media Queries (Responsividad del Footer) --- */
 @media (max-width: 480px) {
     .app-footer {
         padding: 12px 15px;
