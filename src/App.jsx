@@ -56,6 +56,7 @@ function Home() {
         </ul>
       </section>
 
+<<<<<<< HEAD
       <section className="section-block">
         <h2>Descripción del Proyecto</h2>
         <p>
@@ -65,6 +66,25 @@ function Home() {
           permitiendo que la aplicación gestione información de manera segura y efectiva a largo plazo.
         </p>
       </section>
+=======
+        <section className="section-block">
+          <h2>Despliegue en Render</h2>
+          <p>
+            Nuestra base de datos PostgreSQL se encuentra desplegada en la plataforma Render, garantizando la persistencia y disponibilidad de los datos.
+          </p>
+          <p>
+            <strong>URL del Proyecto en Render (Base de Datos):</strong>{" "}
+            <a
+              href="[Pega aquí el link real de tu base de datos o API backend en Render]"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              https://mision2-presentacion-react-d47f.onrender.com/
+            </a>
+          </p>
+        </section>
+      </main>
+>>>>>>> 4f2a3e9 (Actualización del proyecto: cambios recientes)
 
       <section className="section-block">
         <h2>Despliegue en Render</h2>
