@@ -79,7 +79,7 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://mision2-presentacion-react.onrender.com/
+           https://mision2-presentacion-react-d47f.onrender.com/
           </a>
         </p>
       </section>
