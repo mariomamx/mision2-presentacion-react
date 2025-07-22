@@ -1,13 +1,14 @@
 // src/App.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
+import '../App.css';
 
-import LayoutDiseño from "./Componentes/LayoutDiseño";
-import Diagrama from "./Componentes/diagrama";
-import Insert from "./Componentes/insert";
-import Update from "./Componentes/update";
-import Delete from "./Componentes/delete";
+
+import LayoutDiseño from './LayoutDiseño';
+import Diagrama from './diagrama';
+import Insert from './insert';
+import Update from './update';
+import Delete from './delete';
 
 function Home() {
   return (

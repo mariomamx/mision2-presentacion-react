@@ -5,15 +5,14 @@ import Footer from './Footer';
 
 function LayoutDiseño({ children }) {
   return (
-    // Quitamos .app-container de aquí
-    <> {/* Fragmento de React para envolver múltiples elementos sin un div extra */}
-      <Header /> {/* El Header ahora está directamente dentro del body/html */}
-      <div className="app-container"> {/* Este div ahora solo contendrá el contenido principal */}
+    <>
+      <Header />
+      <div className="app-container">
         <main className="app-main-content">
           {children}
         </main>
       </div>
-      <Footer /> {/* El Footer ahora también está directamente dentro del body/html */}
+      <Footer />
     </>
   );
 }

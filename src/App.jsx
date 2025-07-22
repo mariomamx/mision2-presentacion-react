@@ -3,22 +3,15 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
-// ¡Importa tu nuevo componente de diseño!
-import LayoutDiseño from "./Componentes/LayoutDiseño"; 
-
-// Importa tus componentes de página (Home, Diagrama, etc.)
-// Ya no necesitas importar Header y Footer aquí, porque LayoutDiseño los manejará.
+import LayoutDiseño from "./Componentes/LayoutDiseño";
 import Diagrama from "./Componentes/diagrama";
 import Insert from "./Componentes/insert";
 import Update from "./Componentes/update";
 import Delete from "./Componentes/delete";
 
-
-// Tu componente Home se mantiene igual, ya que su contenido será el 'children' del LayoutDiseño
 function Home() {
   return (
     <main className="app-main-content">
-      {/* El contenido de Home que ya tenías */}
       <section className="section-block">
         <h2>Proyecto: Accounting Project Company - Backend & Database</h2>
         <p>
@@ -79,7 +72,7 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-           https://mision2-presentacion-react-d47f.onrender.com/
+            https://mision2-presentacion-react-d47f.onrender.com/
           </a>
         </p>
       </section>
@@ -87,24 +80,14 @@ function Home() {
   );
 }
 
-
 function App() {
   return (
     <Routes>
-      {/* Ahora, cada ruta que necesite el Header y el Footer, 
-        se envuelve con el componente LayoutDiseño. 
-        El componente de la página (ej. <Home />) se convierte en el 'children'.
-      */}
       <Route path="/" element={<LayoutDiseño><Home /></LayoutDiseño>} />
       <Route path="/diagrama" element={<LayoutDiseño><Diagrama /></LayoutDiseño>} />
       <Route path="/insert" element={<LayoutDiseño><Insert /></LayoutDiseño>} />
       <Route path="/update" element={<LayoutDiseño><Update /></LayoutDiseño>} />
       <Route path="/delete" element={<LayoutDiseño><Delete /></LayoutDiseño>} />
-
-      {/* Si en el futuro tuvieras una ruta que NO quieres que tenga el Header y el Footer, 
-        simplemente la defines sin envolverla con LayoutDiseño. Por ejemplo:
-        <Route path="/login" element={<Login />} /> 
-      */}
     </Routes>
   );
 }
