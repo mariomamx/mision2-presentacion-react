@@ -12,9 +12,8 @@ function Header() {
       </div>
 
       <div className="nav-buttons">
-        {/* Este es un ENLACE EXTERNO, por eso usa <a> */}
         <a
-          href="https://accounting-project-companies.onrender.com" // ¡URL actualizada aquí!
+          href="https://accounting-project-companies.onrender.com"
           target="_blank"
           rel="noopener noreferrer"
           className="header-button btn-mision1-render"
@@ -22,19 +21,10 @@ function Header() {
           Ver Misión 1 (Frontend)
         </a>
 
-        {/* Estos son ENLACES INTERNOS, por eso usan <Link> */}
-        <Link to="/diagrama" className="header-button">
-          Diagrama ER
-        </Link>
-        <Link to="/insert" className="header-button">
-          Insertar
-        </Link>
-        <Link to="/update" className="header-button">
-          Actualizar
-        </Link>
-        <Link to="/delete" className="header-button">
-          Eliminar
-        </Link>
+        <Link to="/diagrama" className="header-button">Diagrama ER</Link>
+        <Link to="/insert" className="header-button">Insertar</Link>
+        <Link to="/update" className="header-button">Actualizar</Link>
+        <Link to="/delete" className="header-button">Eliminar</Link>
       </div>
     </header>
   );
